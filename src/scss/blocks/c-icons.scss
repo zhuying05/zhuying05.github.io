@@ -1,0 +1,42 @@
+/* Icons in section headings */
+.svg-icon{
+
+  &__border{
+    fill: none;
+    stroke: $color-headings-primary;
+
+    width: 90px;
+    height: 90px;
+
+    stroke-dasharray: 360px, 360px;
+    stroke-dashoffset: 360;
+    transition: stroke-dashoffset 1s;
+  }
+
+  &__item{
+    fill: $theme-accent;
+    stroke: none;
+  }
+
+  &--is-animated{
+
+    .svg-icon__border{
+      stroke-dashoffset: 0;
+      // animation-name: runSvg;
+      // animation-duration: 2s;
+      // animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes runSvg {
+  0%{
+    stroke-dasharray: 10px, 360px;
+    stroke-dashoffset: 0;
+  }
+
+  100%{
+    stroke-dasharray: 0px, 0px;
+    stroke-dashoffset: 0;
+  }
+}

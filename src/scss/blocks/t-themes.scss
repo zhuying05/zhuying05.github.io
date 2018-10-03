@@ -1,0 +1,32 @@
+// Main nav themes
+.c-main-nav{
+
+  .t-alt-nav &{
+    &__bars{
+      & > span{
+        background: $text-color-header--fullwidth;
+      }
+      &--is-toggled{
+        & > span{
+          background: $color-link;
+        }
+      }
+    }
+    &__link{
+      @include menu-not-collapsed{
+        color: $color-link-nav--alt;
+      }
+    }
+  }
+
+  &.nav-fixed--on-top{
+
+    &.t-alt-nav{
+      .active-link{
+        @include menu-not-collapsed{
+          color: $color-link-nav--alt !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+h1,h2,h3,h4{
+  font-family: $font-headings;
+}
+
+h1{
+  color: $color-headings-primary;
+  line-height: 1.17;
+  @include fluidFontSize(30px, 70px, 480px, 1200px, 30px);
+}
+
+h2{
+  color: $color-headings-primary;
+  line-height: 1.25;
+  @include fluidFontSize(30px, 40px, 320px, 1200px, 30px);
+}
+
+h3{
+  color: $color-headings-secondary;
+  font-size: 1.125rem;
+  line-height: 1.333333;
+}
+
+h4{
+  color: $color-headings-secondary;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p{
+  font-size: 0.875rem;
+}

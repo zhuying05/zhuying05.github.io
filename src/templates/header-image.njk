@@ -1,0 +1,60 @@
+{% macro mainHeader(image="", name="") %}
+
+<header class="c-main-header c-main-header--fullwidth" style="background-image:url({{ image }})">
+
+  <div class="o-container">
+
+    <!-- NAVIGATION -->
+    <div class="c-main-header__nav-wrapper" data-menuAnimated="true">
+      <nav class="c-main-nav t-alt-nav js-main-nav">
+        <ul class="c-main-nav__list nav-fixed--is-active js-main-nav__list">
+          <li class="c-main-nav__item"><a href="#section-about" class="c-main-nav__link" data-navPosition="1"><span>01_</span>about</a></li>
+          <li class="c-main-nav__item"><a href="#section-education" class="c-main-nav__link" data-navPosition="2"><span>02_</span>education</a></li>
+          <li class="c-main-nav__item"><a href="#section-research" class="c-main-nav__link" data-navPosition="3"><span>03_</span>research</a></li>
+          <li class="c-main-nav__item"><a href="#section-publications" class="c-main-nav__link" data-navPosition="4"><span>04_</span>publications</a></li>
+          <li class="c-main-nav__item"><a href="#section-teaching" class="c-main-nav__link" data-navPosition="5"><span>05_</span>teaching</a></li>
+          <li class="c-main-nav__item"><a href="#section-contacts" class="c-main-nav__link" data-navPosition="6"><span>06_</span>contacts</a></li>
+        </ul>
+        <div class="c-main-nav__bars js-main-nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+    <!-- NAVIGATION END -->
+
+    <!-- ABOUT SECTION-->
+    <div id="section-about" class="c-screen-about c-screen-about--fullwidth o-screen-about" data-contentPosition="1">
+      <div class="o-screen-about__col">
+        <h1 class="c-screen-about__header u-mb-5">{{ name }}</h1>
+        <span class="c-screen-about__caption">Associated Professor, doctor of social sience</span>
+        <ul class="c-socials u-mb-35">
+          <li class="c-socials__item">
+            <a href="#" class="c-socials__link">
+              <i class="icofont icofont-brand-linkedin"></i>
+            </a>
+          </li>
+          <li class="c-socials__item">
+            <a href="#" class="c-socials__link">
+              <i class="icofont icofont-social-facebook"></i>
+            </a>
+          </li>
+          <li class="c-socials__item">
+            <a href="#" class="c-socials__link">
+              <i class="icofont icofont-social-twitter"></i>
+          </a>
+        </li>
+        </ul>
+        <p class="u-mb-10"><span class="u-block">Hello!</span> I’m Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo quat.
+        Duis aute irure! Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <a class="c-button c-button--bold-text u-mb-30" href="#">download cv</a>
+      </div>
+    </div>
+
+  </div>
+
+</header>
+
+{% endmacro %}

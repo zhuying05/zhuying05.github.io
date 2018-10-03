@@ -1,0 +1,82 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+// Body reset
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Links
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $color-link--hover;
+    text-decoration: none;
+  }
+
+  &:focus {
+
+  }
+}
+
+// Images
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+// Horizontal rules
+hr {
+  margin-top:    0;
+  margin-bottom: 0;
+  border: 0;
+  border-top: 1px solid black;
+}
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+[role="button"] {
+  cursor: pointer;
+}

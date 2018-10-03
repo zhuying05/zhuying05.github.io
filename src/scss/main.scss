@@ -1,0 +1,88 @@
+
+/*------------------------------------
+    #MAIN
+\*------------------------------------*/
+/**
+ * SETTINGS -s
+ * Type...............Theme fonts loading.
+ *
+ * TOOLS -t
+ * Mixins...............Global mixins.
+ *
+ * GENERIC -g
+ * Reset................…Normalize or reset browser defaults.
+ * Box-sizing...........More manageable box-model.
+ * Shared...............Share certain high-level styles as broadly as possible.
+ *
+ * Base -b
+ * Scaffolding................…Style bare tags.
+ *
+ * OBJECTS -o
+ * Layout...............Simple Layout abstraction tool.
+ * Media.................Generic layout of text+image or image only blocks.
+ * Animations.................Animation functions.
+ *
+ * COMPONENTS -c
+ * Forms................Form styling.
+ * Buttons..............Button styles.
+ * etc...
+ *
+ * THEMES -t
+ * Themes................Global themes, like changing all page colors.
+ *
+ * UTILITIES -u
+ * Helpers..............Helper classes of any purpose.
+ * States...............States of components. Like --is-hidden or smth else.
+ *
+ * VENDOR -v
+ * Modifications..............Change vendor style (JS plugins and so on).
+ *
+ */
+
+// Theme vars
+// All variables
+@import "blocks/variables";
+
+// Tools - mixins and functions
+@import "blocks/t-mixins";
+
+// Generic
+@import "blocks/g-box-sizing";
+@import "blocks/g-reset";
+
+// Base - tags only, no classes
+@import "blocks/b-scaffolding";
+@import "blocks/b-type";
+
+// Objects - no decoration
+@import "blocks/o-animations";
+@import "blocks/o-layout";
+@import "blocks/o-media";
+
+// Components
+@import "blocks/c-form";
+@import "blocks/c-button";
+
+@import "blocks/c-shame";
+@import "blocks/c-main-header";
+@import "blocks/c-main-footer";
+@import "blocks/c-main-nav";
+@import "blocks/c-socials";
+@import "blocks/c-screen";
+@import "blocks/c-section-heading";
+@import "blocks/c-icons";
+@import "blocks/c-timeline";
+@import "blocks/c-card";
+@import "blocks/c-article";
+@import "blocks/c-tabs";
+
+// Themes
+@import "blocks/t-themes";
+
+// Vendor restyling nd iniial files
+@import "blocks/v-modifications";
+@import "blocks/v-icofont";
+
+// Helper classes
+@import "blocks/u-helpers";
+@import "blocks/u-states";

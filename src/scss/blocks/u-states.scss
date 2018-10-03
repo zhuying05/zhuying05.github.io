@@ -1,0 +1,139 @@
+// Main nav states
+.nav-fixed{
+  @include menu-not-collapsed{
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    margin-right: 15px;
+
+    display: flex;
+    align-items: center;
+
+    transition: all $time-main-nav-transitions;
+
+    z-index: 100;
+
+    .c-main-nav__link{
+      color: $color-link-nav;
+
+      span{
+        color: $theme-accent;
+      }
+    }
+  }
+
+  & > &--is-active{
+    @include menu-not-collapsed{
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      animation-name: navSlideRightIn;
+      animation-duration: $time-main-nav-transitions;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &--out{
+    @include menu-not-collapsed{
+      opacity: 0;
+      transform: scale(0.99);
+    }
+  }
+
+  &--on-top{
+    @include menu-not-collapsed{
+      animation-name: navSlideOnTop;
+      animation-duration: $time-main-nav-transitions / 2;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &--on-bottom{
+    display: none;
+    @include menu-not-collapsed{
+      display: block;
+      animation-name: navSlideOnBottom;
+      animation-duration: $time-main-nav-transitions;
+      animation-fill-mode: forwards;
+
+      .c-main-nav__link{
+        color: $color-link;
+      }
+    }
+  }
+}
+
+.nav-hidden-bottom{
+  @include menu-not-collapsed{
+    opacity: 0;
+    transform: translateX(200%);
+  }
+}
+
+.active-link{
+  color: $color-link-nav--active !important;
+  text-shadow: 1px 0px 0px $color-link-nav--active;
+  span{
+    text-shadow: 1px 0px 0px $theme-accent;
+    color: $theme-accent;
+  }
+}
+
+@keyframes navSlideRightIn {
+  0%{
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes navSlideOnTop {
+  0%{
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes navSlideOnBottom {
+  0%{
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+////////////////////////////////
+
+.u-fade-in{
+  visibility: visible;
+  display: block;
+}
+
+.u-fade-out{
+  visibility: hidden;
+  display: none;
+}
+
+.u-fade-out-mobile{
+  @include phone-only{
+    visibility: hidden !important;
+  }
+}
+
+.u-slide-in{
+  @include menu-not-collapsed{
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+}
