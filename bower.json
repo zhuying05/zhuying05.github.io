@@ -1,0 +1,26 @@
+{
+  "name": "ThemeName",
+  "description": "theme",
+  "authors": [
+    "Aspirity"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "wow": "wowjs#>=1.1.2"
+  },
+  "overrides": {
+    "wow": {
+      "main": [
+        "dist/wow.min.js"
+      ]
+    },
+    "jquery": {
+      "main": [
+        "dist/jquery.min.js"
+      ]
+    }
+  }
+}

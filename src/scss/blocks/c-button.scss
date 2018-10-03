@@ -1,0 +1,67 @@
+.c-button{
+
+  display: inline-block;
+  border: none;
+  background: none;
+  box-sizing: none;
+  outline: none;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  font-family: $font-text;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 1;
+  color: $theme-accent;
+
+  transition: all 0.3s;
+
+  position: relative;
+
+  &--primary{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: $theme-accent;
+    color: $color-text-button-primary;
+    border: 2px solid $theme-accent;
+
+    &:hover, &:active, &:focus{
+      color: $color-text-button-primary--hover;
+      background: $body-bg;
+    }
+  }
+
+  &--bold-text, &--simple-text{
+
+    &::before{
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: $theme-accent;
+
+      bottom: 13px;
+      left: 50%;
+      right: 50%;
+
+      transition: all 0.3s;
+    }
+
+    &:hover{
+      &::before{
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &--bold-text{
+    font-weight: $weight-black;
+  }
+
+  &--simple-text{
+    font-weight: $weight-normal;
+  }
+}

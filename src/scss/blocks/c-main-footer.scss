@@ -1,0 +1,34 @@
+.c-main-footer{
+
+  overflow: hidden;
+
+  &__map{
+    height: 365px;
+    transition: margin 0.3s;
+  }
+
+  &__top{
+    display: none;
+    @include menu-not-collapsed{
+      display: block;
+    }
+  }
+
+  &__bottom{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-bg-article;
+
+  }
+
+  &__text{
+    font-size: 0.75rem;
+    line-height: 1.75;
+    color: $color-text-footer;
+  }
+}

@@ -1,0 +1,23 @@
+.c-section-heading{
+
+  margin-top: 20px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+
+  @include menu-not-collapsed{
+    margin-top: 100px;
+    margin-bottom: 70px;
+  }
+
+  &__icon{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__header{
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+}

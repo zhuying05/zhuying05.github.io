@@ -1,0 +1,93 @@
+.c-screen-about{
+
+  &__image{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+
+    @include tablet-portrait-up{
+      width: calc(100% - 70px);
+    }
+
+    span{
+      display: block;
+      margin-top: 100%;
+    }
+
+    img{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__caption{
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    line-height: 1.66666;
+  }
+
+  &--fullwidth{
+
+    .c-screen-about__header{
+      color: $text-color-header--fullwidth;
+    }
+  }
+}
+
+.c-screen-education{
+
+  &__image{
+
+    height: 100%;
+    position: relative;
+    display: none;
+
+    @include tablet-portrait-up{
+      display: inherit;
+    }
+
+    img{
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+.c-screen-research{
+
+}
+
+.c-screen-publications{
+
+}
+
+.c-screen-contact{
+
+  &__address{
+    list-style: none;
+    font-size: 0.875rem;
+    line-height: 1.7142;
+  }
+
+  &__item{
+    margin-bottom: 15px;
+    display: block;
+    font-family: $font-headings;
+    font-weight: $weight-bold;
+
+  }
+
+}
