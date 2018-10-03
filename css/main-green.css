@@ -174,7 +174,7 @@ h4 {
   line-height: 1.5; }
 
 p {
-  font-size: 1rem; }
+  font-size: 1.5rem; }
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -1036,7 +1036,7 @@ p {
   margin-bottom: 5px; }
 
 .c-article__text {
-  margin-bottom: 5px; }
+  margin-bottom: 8px; }
 
 .c-article__cite {
   font-family: "Lora", sans-serif;
